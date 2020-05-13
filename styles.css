@@ -1,3 +1,79 @@
-body {
-    background: pink;
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
+body {
+    background: #24272E;
+}
+
+header {
+    background: white;
+    padding: 20px;
+}
+
+header > h1 {
+    color: #24272E;
+    text-align: center;
+    font-family: Asap, sans-serif;
+}
+
+.score-board{
+    border: 3px solid white;
+    width: 200px;
+    border-radius: 4px;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    font-size: 46px;
+    padding: 15px 20px;
+    font-family: Asap, sans-serif;
+    position: relative;
+}
+
+.badge{
+    background: rgb(185, 67, 67);
+    color: white;
+    font-size: 14px;
+    padding: 2px 5px;
+    font-family: Asap, sans-serif;
+}
+
+#user-label{
+    position: absolute;
+    top: 25px;
+    left: -20px;
+}
+#comp-label{
+    position: absolute;
+    top: 25px;
+    right: -25px;
+}
+
+.result{
+    color: white;
+    font-size: 35px;
+}
+
+.result > p {
+    text-align: center;
+    font-weight: bold;
+    font-family: Asap, sans-serif;
+}
+
+.choice {
+    display: inline-block;
+    
+}
+
+
+
+
+
+
+
+
+
+
+

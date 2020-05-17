@@ -24,15 +24,30 @@ function win(userChoice, compChoice) { //parameters given and defining the win f
     userScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}user beats ${convertToWord(compChoice)}comp. You win!`; //EIS6 strings, ${} added to functions 
+    const smallUserWord = "USER".fontsize(3).sub();
+    const smallCompWord = "COMP".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(compChoice)}${smallCompWord} You Win!`; //EIS6 strings, ${} added to functions 
 }
 
-function lose() {
-    console.log("Loses");
+function lose(userChoice, compChoice) {
+    compScore++;
+    userScore_span.innerHTML = userScore;
+    compScore_span.innerHTML = compScore;
+    const smallUserWord = "USER".fontsize(3).sub();
+    const smallCompWord = "COMP".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(compChoice)}${smallCompWord} beats ${convertToWord(userChoice)}${smallUserWord} You Lose!`; //EIS6 strings, ${} added to functions 
+
 }
 
-function draw() {
-    console.log("draws");
+function draw(userChoice, compChoice) {
+    userScore++;
+    compScore++;
+    userScore_span.innerHTML = userScore;
+    compScore_span.innerHTML = compScore;
+    const smallUserWord = "USER".fontsize(3).sub();
+    const smallCompWord = "COMP".fontsize(3).sub();
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} and ${convertToWord(compChoice)}${smallCompWord} are the same! You draw!`; //EIS6 strings, ${} added to functions 
+
 }
 
 function game(userChoice) { //function defined for game with argument userChoice which is what the user clicks on and compare against the comp choice

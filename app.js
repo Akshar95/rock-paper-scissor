@@ -14,11 +14,17 @@ function getCompChoice () {
     return choices[randomNumber];
 }
 
+function convertToWord (letter) {
+    if (letter === "r") return "Rock";
+    if (letter === "p") return "Paper";
+    return "Scissors";
+}
+
 function win(userChoice, compChoice) { //parameters given and defining the win function
     userScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_p.innerHTML = userChoice + " beats " + compChoice + ". You win!";
+    result_p.innerHTML = `${convertToWord(userChoice)}user beats ${convertToWord(compChoice)}comp. You win!`; //EIS6 strings, ${} added to functions 
 }
 
 function lose() {

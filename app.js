@@ -40,10 +40,6 @@ function lose(userChoice, compChoice) {
 }
 
 function draw(userChoice, compChoice) {
-    userScore++;
-    compScore++;
-    userScore_span.innerHTML = userScore;
-    compScore_span.innerHTML = compScore;
     const smallUserWord = "USER".fontsize(3).sub();
     const smallCompWord = "COMP".fontsize(3).sub();
     result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} and ${convertToWord(compChoice)}${smallCompWord} are the same! You draw!`; //EIS6 strings, ${} added to functions 
